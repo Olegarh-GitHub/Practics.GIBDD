@@ -1,0 +1,11 @@
+﻿<Application x:Class="DESKTOP_APP.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:DESKTOP_APP"
+             StartupUri="Views/AuthorizationView.xaml">
+    <Application.Resources>
+        <Style x:Key="RoadNumbersFont" TargetType="Label">
+            <Setter Property="FontFamily" Value="Fonts/RoadNumbers2_0.ttf #road_numbers"/>
+        </Style>
+    </Application.Resources>
+</Application>

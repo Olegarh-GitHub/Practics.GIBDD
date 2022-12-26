@@ -1,0 +1,25 @@
+﻿<Window x:Class="Practics.GIBDD.Desktop.Views.FineView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Просмотр штрафа" Height="450" Width="500"
+        Icon="../Resources/gibdd_logo.png"
+        ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Background="Azure">
+    <Window.Resources>
+        <Style x:Key="buttonGibdd" TargetType="Button">
+            <Setter Property="FontFamily" Value="GOST Type BU"/>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+            <Setter Property="Margin" Value="10"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <StackPanel>
+            <TextBox x:Name="carNumTextBox" Height="150" Width="400" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox x:Name="licenseNumTextBox" Height="50" Width="400" Margin="0 10 0 0"/>
+            <Button Style="{StaticResource buttonGibdd}" x:Name="showImageButton" Content="Показать изображение" Height="50" Margin="0 10 0 0" Width="400" Click="showImageButton_Click"/>
+            <Button Style="{StaticResource buttonGibdd}" x:Name="saveButton" Content="Сохранить" Height="50" Margin="0 10 0 0" Width="400" Click="saveButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

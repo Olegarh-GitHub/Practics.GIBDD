@@ -1,0 +1,55 @@
+﻿<Window x:Class="Practics.GIBDD.Desktop.Views.ExportFSSPView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Наказать должников" Height="300" Width="500"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Background="Azure"
+        Icon="../Resources/fssp_logo.png">
+    <Window.Resources>
+        <Style x:Key="valueLabel" TargetType="Label">
+            <Setter Property="FontFamily" Value="GOST Type BU"/>
+        </Style>
+        <Style x:Key="valueLabelBig" TargetType="Label">
+            <Setter Property="FontFamily" Value="GOST Type BU"/>
+            <Setter Property="FontSize" Value="24"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+        </Style>
+        
+        <Style x:Key="buttonGibdd" TargetType="Button">
+            <Setter Property="FontFamily" Value="GOST Type BU"/>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="8*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width="8*"></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        
+        <Canvas Grid.Row="0" Grid.Column="0">
+            <Image Source="../Resources/fssp_logo.png" Height="64" Margin="10 10 0 0"></Image>
+        </Canvas>
+        <StackPanel Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Label Style="{StaticResource valueLabelBig}">Расправиться с должниками</Label>
+        </StackPanel>
+        <Canvas Grid.Row="1" Grid.Column="0"></Canvas>
+        <StackPanel Grid.Row="1" Grid.Column="1">
+            <Label HorizontalAlignment="Center" Style="{StaticResource valueLabel}">Босс, мы готовы их накрыть. Просто отдайте приказ</Label>
+            <Image Source="../Resources/fssp_guards.jpg"></Image>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button x:Name="exportButton" Content="Экспортировать данные в ФССП" Click="exportButton_Click" Height="30" Width="200" Style="{StaticResource buttonGibdd}"/>
+        </StackPanel>
+        
+    </Grid>
+</Window>
